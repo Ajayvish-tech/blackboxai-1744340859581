@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create Your Resume - Resume Builder</title>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+        }
+    </style>
+</head>
+<body class="bg-gray-50">
+    <!-- Navigation -->
+    <nav class="bg-white shadow-lg">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-16">
+                <div class="flex">
+                    <div class="flex-shrink-0 flex items-center">
+                        <a href="index.html" class="text-2xl font-bold text-gray-800">Resume Builder</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Form -->
+    <div class="max-w-7xl mx-auto py-6 sm:px-6 lg:px-8">
+        <div class="px-4 py-6 sm:px-0">
+            <form id="resumeForm" class="space-y-8">
+                <!-- Resume Type Selection -->
+                <div class="bg-white shadow px-4 py-5 sm:rounded-lg sm:p-6">
+                    <div class="md:grid md:grid-cols-3 md:gap-6">
+                        <div class="md:col-span-1">
+                            <h3 class="text-lg font-medium leading-6 text-gray-900">Resume Type</h3>
+                            <p class="mt-1 text-sm text-gray-500">Select the type of document you want to create.</p>
+                        </div>
+                        <div class="mt-5 md:mt-0 md:col-span-2">
+                            <div class="grid grid-cols-2 gap-4">
+                                <div class="flex items-center">
+                                    <input type="radio" name="resumeType" value="resume" checked class="h-4 w-4 text-blue-600 border-gray-300">
+                                    <label class="ml-3 block text-sm font-medium text-gray-700">Resume</label>
+                                </div>
+                                <div class="flex items-center">
+                                    <input type="radio" name="resumeType" value="cv" class="h-4 w-4 text-blue-600 border-gray-300">
+                                    <label class="ml-3 block text-sm font-medium text-gray-700">Curriculum Vitae</label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Personal Information -->
+                <div class="bg-white shadow px-4 py-5 sm:rounded-lg sm:p-6">
+                    <div class="md:grid md:grid-cols-3 md:gap-6">
+                        <div class="md:col-span-1">
+                            <h3 class="text-lg font-medium leading-6 text-gray-900">Personal Information</h3>
+                            <p class="mt-1 text-sm text-gray-500">Use a permanent address where you can receive mail.</p>
+                        </div>
+                        <div class="mt-5 md:mt-0 md:col-span-2">
+                            <div class="grid grid-cols-6 gap-6">
+                                <div class="col-span-6 sm:col-span-4">
+                                    <label for="fullName" class="block text-sm font-medium text-gray-700">Full Name *</label>
+                                    <input type="text" name="fullName" id="fullName" required class="mt-1 focus:ring-blue-500 focus:border-blue-500 block w-full shadow-sm sm:text-sm border-gray-300 rounded-md">
+                                </div>
+
+                                <div class="col-span-6">
+                                    <label for="houseNo" class="block text-sm font-medium text-gray-700">House No. *</label>
+                                    <input type="text" name="houseNo" id="houseNo" required class="mt-1 focus:ring-blue-500 focus:border-blue-500 block w-full shadow-sm sm:text-sm border-gray-300 rounded-md">
+                                </div>
+
+                                <div class="col-span-6">
+                                    <label for="landmark" class="block text-sm font-medium text-gray-700">Landmark</label>
+                                    <input type="text" name="landmark" id="landmark" class="mt-1 focus:ring-blue-500 focus:border-blue-500 block w-full shadow-sm sm:text-sm border-gray-300 rounded-md">
+                                </div>
+
+                                <div class="col-span-6 sm:col-span-3">
+                                    <label for="area" class="block text-sm font-medium text-gray-700">Area/Locality *</label>
+                                    <input type="text" name="area" id="area" required class="mt-1 focus:ring-blue-500 focus:border-blue-500 block w-full shadow-sm sm:text-sm border-gray-300 rounded-md">
+                                </div>
+
+                                <div class="col-span-6 sm:col-span-3">
+                                    <label for="stateCity" class="block text-sm font-medium text-gray-700">State/City *</label>
+                                    <input type="text" name="stateCity" id="stateCity" required class="mt-1 focus:ring-blue-500 focus:border-blue-500 block w-full shadow-sm sm:text-sm border-gray-300 rounded-md">
+                                </div>
+
+                                <div class="col-span-6 sm:col-span-3">
+                                    <label for="pincode" class="block text-sm font-medium text-gray-700">Pincode *</label>
+                                    <input type="text" name="pincode" id="pincode" required pattern="[0-9]{6}" class="mt-1 focus:ring-blue-500 focus:border-blue-500 block w-full shadow-sm sm:text-sm border-gray-300 rounded-md">
+                                </div>
+
+                                <div class="col-span-6 sm:col-span-3">
+                                    <label for="mobile" class="block text-sm font-medium text-gray-700">Mobile No. *</label>
+                                    <input type="tel" name="mobile" id="mobile" required pattern="[0-9]{10}" class="mt-1 focus:ring-blue-500 focus:border-blue-500 block w-full shadow-sm sm:text-sm border-gray-300 rounded-md">
+                                </div>
+
+                                <div class="col-span-6 sm:col-span-4">
+                                    <label for="email" class="block text-sm font-medium text-gray-700">Email Id</label>
+                                    <input type="email" name="email" id="email" class="mt-1 focus:ring-blue-500 focus:border-blue-500 block w-full shadow-sm sm:text-sm border-gray-300 rounded-md">
+                                </div>
+
+                                <div class="col-span-6">
+                                    <label class="block text-sm font-medium text-gray-700">Profile Picture</label>
+                                    <div class="mt-1 flex items-center">
+                                        <span class="inline-block h-12 w-12 rounded-full overflow-hidden bg-gray-100">
+                                            <img id="profilePreview" src="https://via.placeholder.com/100" alt="Profile preview" class="h-full w-full object-cover">
+                                        </span>
+                                        <input type="file" id="profilePicture" accept="image/*" class="ml-5 bg-white py-2 px-3 border border-gray-300 rounded-md shadow-sm text-sm leading-4 font-medium text-gray-700 hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Career Objective -->
+                <div class="bg-white shadow px-4 py-5 sm:rounded-lg sm:p-6">
+                    <div class="md:grid md:grid-cols-3 md:gap-6">
+                        <div class="md:col-span-1">
+                            <h3 class="text-lg font-medium leading-6 text-gray-900">Career Objective</h3>
+                            <p class="mt-1 text-sm text-gray-500">Write a brief description of your career goals.</p>
+                        </div>
+                        <div class="mt-5 md:mt-0 md:col-span-2">
+                            <div class="grid grid-cols-6 gap-6">
+                                <div class="col-span-6">
+                                    <select id="objectiveType" class="mt-1 block w-full py-2 px-3 border border-gray-300 bg-white rounded-md shadow-sm focus:outline-none focus:ring-blue-500 focus:border-blue-500 sm:text-sm">
+                                        <option value="entry">Entry-level position</option>
+                                        <option value="custom">Custom Objective</option>
+                                    </select>
+                                    <textarea id="customObjective" rows="4" class="mt-4 shadow-sm focus:ring-blue-500 focus:border-blue-500 block w-full sm:text-sm border-gray-300 rounded-md" placeholder="Enter your career objective"></textarea>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Qualifications -->
+                <div class="bg-white shadow px-4 py-5 sm:rounded-lg sm:p-6">
+                    <div class="md:grid md:grid-cols-3 md:gap-6">
+                        <div class="md:col-span-1">
+                            <h3 class="text-lg font-medium leading-6 text-gray-900">Qualifications</h3>
+                            <p class="mt-1 text-sm text-gray-500">Add your educational qualifications.</p>
+                        </div>
+                        <div class="mt-5 md:mt-0 md:col-span-2">
+                            <div id="qualificationsContainer">
+                                <!-- Qualification entries will be added here -->
+                            </div>
+                            <button type="button" onclick="addQualification()" class="mt-4 inline-flex items-center px-4 py-2 border border-transparent shadow-sm text-sm font-medium rounded-md text-white bg-blue-600 hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500">
+                                <i class="fas fa-plus mr-2"></i>
+                                Add Qualification
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Work Experience -->
+                <div class="bg-white shadow px-4 py-5 sm:rounded-lg sm:p-6">
+                    <div class="md:grid md:grid-cols-3 md:gap-6">
+                        <div class="md:col-span-1">
+                            <h3 class="text-lg font-medium leading-6 text-gray-900">Work Experience</h3>
+                            <p class="mt-1 text-sm text-gray-500">Add your work experience details.</p>
+                        </div>
+                        <div class="mt-5 md:mt-0 md:col-span-2">
+                            <div id="experienceContainer">
+                                <!-- Experience entries will be added here -->
+                            </div>
+                            <button type="button" onclick="addExperience()" class="mt-4 inline-flex items-center px-4 py-2 border border-transparent shadow-sm text-sm font-medium rounded-md text-white bg-blue-600 hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500">
+                                <i class="fas fa-plus mr-2"></i>
+                                Add Experience
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Submit Button -->
+                <div class="flex justify-end">
+                    <button type="submit" class="ml-3 inline-flex justify-center py-2 px-4 border border-transparent shadow-sm text-sm font-medium rounded-md text-white bg-blue-600 hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500">
+                        Create Resume
+                    </button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <script src="js/main.js"></script>
+</body>
+</html>
